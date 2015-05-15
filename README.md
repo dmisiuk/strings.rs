@@ -1,3 +1,5 @@
+[![Build Status](https://https://travis-ci.org/minsler/strings.rs.svg)](https://travis-ci.org/minsler/strings.rs)
+
 # Utility string data structures for Rust
 
 Currently contains (more welcome):
