@@ -18,7 +18,7 @@
 //   chars -> char_indices and flip order of char/index
 // Eq
 
-extern crate rustc_unicode;
+extern crate unicode;
 
 use std::str::FromStr;
 use std::{cmp, fmt};
@@ -195,7 +195,7 @@ impl<'a> Chars<'a> {
 
     fn read_char(&mut self) -> char {
         let first_byte = self.read_byte();
-        let width = rustc_unicode::str::utf8_char_width(first_byte);
+        let width = unicode::str::utf8_char_width(first_byte);
         if width == 1 {
             return first_byte as char
         }

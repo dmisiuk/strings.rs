@@ -18,7 +18,7 @@
 // better allocation
 // balancing?
 
-extern crate rustc_unicode;
+extern crate unicode;
 
 use std::fmt;
 use std::ops::Range;
@@ -278,7 +278,7 @@ impl<'rope> Iterator for RopeChars<'rope> {
 impl<'rope> RopeChars<'rope> {
     fn read_char(&mut self) -> char {
         let first_byte = self.read_byte();
-        let width = rustc_unicode::str::utf8_char_width(first_byte);
+        let width = unicode::str::utf8_char_width(first_byte);
         if width == 1 {
             return first_byte as char
         }
